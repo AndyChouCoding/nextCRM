@@ -1,8 +1,10 @@
 import Button from "@/components/Buttons";
+import { useRouter } from "next/router";
 
 
 
 export default function Home() {
+  const router = useRouter();
   return (
     <div className="flex justify-center">
         <div className=" mt-[40vh] bg-amber-200 p-4">
@@ -15,7 +17,7 @@ export default function Home() {
             <input className="border-1 p-1" id="password" type="password" />
           </div>
           <div className="flex justify-end">
-            <Button variant={"Login"} onClick={()=>{console.log("login")}}>Login</Button>
+            <Button variant={"Login"} onClick={()=>{router.push('/dashboard')}}>Login</Button>
           </div>
         </div>
     </div>
